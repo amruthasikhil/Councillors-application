@@ -1,0 +1,22 @@
+{% extends "mayor/index.html"  %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/mayor_view_notificationb">
+  <table >
+      <tr><td><input type="hidden" name="sid" value="{{ i['notification_id'] }}" required class="form-control"/></td></tr>
+    <tr>
+      <th width="143" scope="row">Subject</th>
+      <td width="395"><label for="textfield"></label>
+      <input type="text" name="textfield" id="textfield" value="{{ i['subject'] }}" required class="form-control"/></td>
+    </tr>
+    <tr>
+      <th scope="row">Description</th>
+      <td><label for="textarea"></label>
+      <textarea name="textarea" id="textarea" required class="form-control">{{ i['description'] }}</textarea></td>
+    </tr>
+    <tr>
+    <td></td><td><input type="submit" name="button" id="button" value="Update" class="btn-success"/>
+      </td>
+    </tr>
+  </table>
+</form>
+{% endblock %}

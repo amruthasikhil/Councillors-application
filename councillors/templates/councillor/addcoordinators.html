@@ -1,0 +1,55 @@
+{% extends "councillor/index.html"  %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/add_coordinator_ins" enctype="multipart/form-data">
+  <table width="375" cellpadding="6">
+    <tr>
+      <th width="104">Name</th>
+      <td width="255"><input type="text" name="textfield" id="textfield" class="form-control" required/></td>
+    </tr>
+      <tr>
+
+    <th>Gender</th>
+    <td>
+          <input type="radio" name="RadioGroup1" value="male" id="RadioGroup1_0"  required/>
+          male
+        <br />
+          <input type="radio" name="RadioGroup1" value="female" id="RadioGroup1_1"  required/>
+          female
+        <br />
+      </p>
+    </td>
+  </tr>
+    <tr>
+      <th>Place</th>
+      <td><input type="text" name="textfield2" id="textfield2" class="form-control" required/></td>
+    </tr>
+    <tr>
+      <th>Post</th>
+      <td><input type="text" name="textfield3" id="textfield3" class="form-control" required/></td>
+    </tr>
+    <tr>
+      <th>Pincode</th>
+      <td><input type="text" name="textfield4" id="textfield4" class="form-control" required/></td>
+    </tr>
+    <tr>
+      <th>Email</th>
+      <td><input type="text" name="textfield5" id="textfield5" class="form-control" required/></td>
+    </tr>
+    <tr>
+      <th>Phone</th>
+      <td><input type="text" name="textfield6" id="textfield6" class="form-control" required/></td>
+    </tr>
+      <tr>
+
+    <th>Picture</th>
+    <td>
+      <input type="file" name="fileField" id="fileField"class="form-control" required/>
+    <br></td>
+  </tr>
+    <tr>
+    <td></td>
+      <td colspan="2"><center><input type="submit" name="button" id="button" value="ADD" /></center></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}

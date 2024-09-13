@@ -1,0 +1,20 @@
+{% extends "admin/index.html" %}
+{% block body %}
+
+
+<form id="form1" name="form1" method="post" action="/update_b" enctype="multipart/form-data">
+<table width="443">
+  <tr>
+      <td><input type="hidden" name="did" value="{{ data['dept_id'] }}"/></td>
+    <td width="158" height="60">Department Name</td>
+    <td width="269"> <input type="text" name="textfield" id="textfield" value="{{ data['name'] }}" class="form-control"/></td>
+  </tr>
+  <tr>
+      <td></td>
+    <td colspan="2">
+      <input type="submit" name="button" id="button" value="update" class="btn btn-primary"  />
+   </td>
+    </tr>
+</table>
+</form>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "mayor/index.html"  %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table class="table table-striped">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Councillor Info</th>
+      <th scope="col">Coordinator Info</th>
+      <th scope="col">Fund</th>
+      <th scope="col">Date</th>
+      <th scope="col">&nbsp;</th>
+    </tr>
+      {% for i in d %}
+    <tr>
+      <td>&nbsp;{{ loop.index }}</td>
+        <td>&nbsp;<img src="{{ i['i'] }}" alt="" width="40" height="40"/><br/>&nbsp;{{ i['cname'] }}</td>
+        <td>&nbsp;<img src="{{ i['image'] }}" alt="" width="40" height="40"/><br/>&nbsp;{{ i['name'] }}&nbsp;</td>
+      <td>&nbsp;&nbsp;{{ i['fund'] }}</td>
+      <td>&nbsp;{{ i['date'] }}&nbsp;</td>
+      <td><a href="/morefc/{{ i['coordinator_id'] }}/{{ i['councillor_id'] }}">more</a></td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

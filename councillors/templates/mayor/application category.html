@@ -1,0 +1,46 @@
+{% extends "mayor/index.html"  %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/mayor_add_application_category1" onsubmit="return g()">
+  <table>
+    <tr>
+      <th scope="col">Category</th>
+      <td><label for="textfield"></label>
+      <input type="text" name="textfield" id="textfield" required class="form-control" /></td>
+    </tr>
+    <tr>
+      <th>Department</th>
+        <td><select name="textfield2" required class="form-control" id="textfield2">
+        <option value="a">---select---</option>
+            {% for i in d %}
+            <option value="{{ i['dept_id']}}">{{ i['name'] }}</option>
+            {% endfor %}
+        </select>
+        </td>
+    </tr>
+    <tr>
+      <th>Description</th>
+      <td><label for="textarea"></label>
+      <textarea name="textarea" id="textarea"  required class="form-control"></textarea></td>
+    </tr>
+    <tr>
+    <td></td>
+      <td colspan="2"><div>
+        <input type="submit" name="button" id="button" value="Submit" class="btn-success"/>
+      </div></td>
+    </tr>
+  </table>
+</form>
+<script type="text/javascript">
+function g() {
+    var a=document.getElementById('textfield2').value;
+    if(a=='a')
+    {
+       alert("please enter valid department")
+        return false;
+    }else{
+        return true;
+    }
+
+}
+</script>
+{% endblock %}

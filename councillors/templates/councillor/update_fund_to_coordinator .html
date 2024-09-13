@@ -1,0 +1,35 @@
+{% extends "councillor/index.html"  %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/b">
+  <table cellpadding="6">
+  <tr><td><input type="hidden" name="n" value="{{ d3['fund_id'] }}"></td></tr>
+    <tr>
+      <th>Coordinator</th>
+      <td><select name="select" id="select"  class="form-control" required>
+            <option value="{{ d3['login_id'] }}">{{ d3['name'] }}</option>
+            {% for i in d %}
+            <option value="{{ i['login_id'] }}">{{ i['name'] }}</option>
+            {% endfor %}
+      </select>
+      </td>
+    </tr>
+    <tr>
+      <th>Fund to councillor</th>
+      <td><select name="select2" id="select2"  class="form-control" required onselect="h()">
+            <option value="{{ d3['fund_id'] }}">{{ d3['fund'] }}</option>
+            {% for i2 in d2 %}
+            <option value="{{ i2['fund_id'] }}">{{ i2['fund'] }}</option>
+            {% endfor %}
+      </select>
+      </td>
+    </tr>
+    <tr><th>Fund</th>
+    <td><input type="text" name="fund" class="form-control" value="{{ d3['fund'] }}" required/></td></tr>
+    <tr>
+      <td height="24" colspan="2"><center><input type="submit" name="button" id="button" value="ADD" /></center></td>
+    </tr>
+  </table>
+</form>
+
+
+{% endblock %}

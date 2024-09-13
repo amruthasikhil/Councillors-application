@@ -1,0 +1,41 @@
+{% extends "admin/index.html" %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/search" enctype="multipart/form-data">
+  <div class="form-inline col-lg-12">
+      <div class="form-group col-md-12"> <input name="srch" type="text" class="form-control col-md-11"/>
+          <input name="btn" type="submit" value="search" class="btn btn-success"/></div>
+
+     </div>
+
+  <br />
+<br>
+  <table class="table table-striped">
+  <tr>
+  <th width="41">#</th>
+    <th width="167">Name</th>
+    <th width="68">Gender</th>
+    <th width="135">DOB</th>
+   <th width="243">Address</th>
+     <th width="149">Email</th>
+    <th width="125">Phone</th>
+      <th colspan="2">Period&nbsp;</th>
+    
+ <th colspan="2">&nbsp;</th>
+   </tr>
+      {% for i in data %}
+  <tr>
+     <td>{{ loop.index }}&nbsp;</td>
+   <td> <img src="{{ i['picture'] }}" alt="" name="img" width="60" height="50" id="img" /><br>{{ i['mayor_name'] }} </td>
+    <td width="135">&nbsp;{{ i['gender'] }}</td>
+    <td>{{ i['dob'] }}</td>
+      <td>{{ i['house_name'] }}<br/>{{ i['place'] }}<br/>{{ i['pincode'] }}<br/>{{ i['district'] }}</td>
+    <td width="149">&nbsp;{{ i['email'] }}</td>
+    <td width="125">&nbsp;{{ i['phone'] }}</td>
+      <td>{{ i['joindate'] }} to <br>{{ i['enddate'] }}&nbsp;</td>
+    <td width="116"><a href="/mayor_update/{{ i['mayor_id'] }}"><input type="button"class="btn btn-success" value="edit"/></a></td>
+      <td width="123"><a href="/mayor_delete/{{ i['login_id'] }}" onclick="return confirm('Are you sure')"><input type="button" class="btn btn-danger"value="delete"/></a></td>
+  </tr>
+      {% endfor %}
+</table>
+</form>
+{% endblock %}

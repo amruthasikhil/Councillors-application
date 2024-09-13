@@ -1,0 +1,35 @@
+{% extends "mayor/index.html"  %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/mayor_add_projectb">
+  <table >
+    <tr>
+      <th width="78" scope="row">Name</th>
+      <td width="380"><label for="textfield"></label>
+      <input type="text" name="textfield" id="textfield" required class="form-control" /></td>
+    </tr>
+    <tr>
+      <th scope="row">Details</th>
+      <td><label for="textarea"></label>
+      <textarea name="textarea" id="textarea" required class="form-control"></textarea></td>
+    </tr>
+
+      <tr>
+      <th width="78" scope="row">Enddate</th>
+      <td width="380"><label for="textfield1"></label>
+      <input type="date" name="textfield3" id="textfield3" required class="form-control" /></td>
+    </tr>
+
+       <tr>
+      <th width="78" scope="row">Amount</th>
+      <td width="380"><label for="textfield1"></label>
+      <input type="text" name="textfield4" id="textfield4" required class="form-control" /></td>
+    </tr>
+    <tr>
+      <th scope="row">&nbsp;</th>
+      <td><div align="center">
+        <input type="submit" name="button" id="button" value="submit" class="btn-success"/>
+      </div></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}

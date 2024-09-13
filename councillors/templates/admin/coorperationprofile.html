@@ -1,0 +1,118 @@
+{% extends "admin/index.html" %}
+{% block body %}
+
+
+<form action="" method="get"></form><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form action="/addcoorperation" method="post" enctype="multipart/form-data" name="form1" onsubmit="return confirm('are you sure......')">
+<h3>ADD CO-ORPERATION</h3>
+  <table width="549" cellpadding="9">
+    <tr>
+      <td width="233">Cooperation Name</td>
+      <td width="300"><input type="text" name="textfield" class="form-control" id="textfield" required class="form-control"/></td>
+    </tr>
+    
+    <tr>
+      <td>Place</td>
+      <td><input type="text" name="textfield4" class="form-control" id="textfield4"required class="form-control"/></td>
+    </tr>
+    <tr>
+      <td>Pincode</td>
+      <td><input type="number" name="textfield5" class="form-control"  id="textfield5" required class="form-control"/></td>
+    </tr>
+     <tr>
+      <td>Email</td>
+      <td><input type="text" name="textfield3" id="textfield3" class="form-control" required class="form-control"/></td>
+    </tr>
+    <tr>
+      <td>Phone Number</td>
+      <td><input type="number" name="textfield2" id="textfield2" class="form-control" required class="form-control"/></td>
+    </tr>
+   
+    <tr>
+      <td>Picture</td>
+      <td><input type="file" name="fileField" id="fileField" class="form-control" required class="form-control"/></td>
+    </tr>
+    <tr>
+        <td></td>
+      <td colspan="2"><input type="submit" name="button" class="btn btn-primary" id="button" value="ADD" /></td>
+    </tr>
+  </table>
+
+</form>
+       <script type="text/javascript" src="/static/jquery.js"></script>
+<script>
+$(document).ready(function(){
+{#alert("mmm")#}
+ $("#textfield2").keyup(function () {
+{#     alert("hiiii");#}
+     var a=$("#textfield2").val();
+     var h=a.length;
+     if(h!=10)
+     {
+{#         alert("hide");#}
+         $("#button").hide();
+     }
+     else {
+         $("#button").show()
+
+     }
+{##}
+ });
+ $("#textfield3").keyup(function () {
+     var email=$("#textfield3").val();
+     if(email != 0)
+        {
+            if(isValidEmailAddress(email))
+            {
+               $("#button").show();
+            } else {
+                $("#button").hide();
+            }
+        } else {
+            alert("none");
+        }
+
+
+ });
+
+
+ $("#textfield5").keyup(function () {
+{#     alert("hiiii");#}
+     var a=$("#textfield5").val();
+     var h=a.length;
+     if(h!=6)
+     {
+{#         alert("hide");#}
+         $("#button").hide();
+     }
+     else {
+         $("#button").show()
+
+     }
+{##}
+ });
+
+
+});
+{#email#}
+function isValidEmailAddress(emailAddress) {
+    var pattern = /^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i;
+    return pattern.test(emailAddress);
+}
+
+
+</script>
+      <script>
+    function h() {
+      a=confirm("are you sure......");
+    }
+    </script>
+
+{% endblock %}

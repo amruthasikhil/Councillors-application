@@ -1,0 +1,53 @@
+{% extends "clerk/index.html"  %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/work_reportb" onsubmit="return g()" enctype="multipart/form-data">
+  <table>
+      <tr><td><input type="hidden" name="n" value="{{ data }}"></td></tr>
+    <tr>
+      <th width="150" scope="col">Status</th>
+      <td width="437" scope="col"><label for="select"></label>
+         <select name="select" id="select"  class="form-control" required>
+            <option value="a">---select---</option>
+            <option>working on</option>
+              <option>Complete</option>
+      </select>
+      </td>
+
+    </tr>
+    <tr>
+      <th>Description</th>
+      <td><label for="textarea"></label>
+      <input type="file" name="textarea" id="textarea"  class="form-control"  accept=".pdf" required/></td>
+    </tr>
+    <tr>
+    <td></td>
+      <td colspan="2"><div align="center">
+        <input type="submit" name="button" id="button" value="upload" />
+      </div></td>
+      <td colspan="2"><div align="center">
+
+      </div></td>
+    </tr>
+  </table>
+</form>
+    <script type="text/javascript">
+function g() {
+    var a=document.getElementById('select').value;
+{#    alert(a)#}
+    var b1=document.getElementById('button2');
+
+    if(a=='a')
+    {
+       alert("please enter valid option")
+        return false;
+    }else{
+        return true;
+    }
+
+}
+
+{#function show(){#}
+{#   document.getElementById('hidden_div').style.display = "block";#}
+{# } #}
+</script>
+{% endblock %}

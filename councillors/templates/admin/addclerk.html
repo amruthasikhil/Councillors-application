@@ -1,0 +1,187 @@
+{% extends "admin/index.html"  %}
+{% block body %}
+<form id="form2" name="form2" method="post" action="/add_clerk" enctype="multipart/form-data" onsubmit="return confirm('are you sure......')">
+<h3> ADD CLERK</h3>
+<p>&nbsp;</p>
+<table width="583" height="754" >
+  <tr>
+    <td width="53">&nbsp;</td>
+    <td width="119"><p>Name</p></td>
+    <td width="395">
+      <input type="text"  class="form-control" name="textfield" id="textfield" required/>
+    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>Gender</td>
+    <td>   
+          <input type="radio" name="RadioGroup1" value="male" id="RadioGroup1_0" required/>
+          male
+        <br />
+          <input type="radio" name="RadioGroup1" value="female" id="RadioGroup1_1" required/>
+          female
+        <br />
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>DOB</td>
+    <td>
+      <input type="date" name="textfield3" id="textfield3" class="form-control"required/>
+    </td>
+  </tr>
+ 
+  <tr>
+    <td>&nbsp;</td>
+    <td>House Name</td>
+    <td>
+      <input type="text" name="textfield2" id="textfield2"class="form-control" required/>
+    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>Place</td>
+    <td>
+      <input type="text" name="textfield5" id="textfield5" class="form-control" required/>
+    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>Phone</td>
+    <td>
+      <input type="number" name="textfield6" id="textfield6" class="form-control" required />
+    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>Pincode</td>
+    <td>
+      <input type="number" name="textfield10" id="textfield10" class="form-control"required/>
+    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>District</td>
+    <td>
+      <input type="text" name="textfield9" id="textfield9" class="form-control"required/>
+    </td>
+  </tr>
+   <tr>
+     <td>&nbsp;</td>
+    <td>Email</td>
+    <td>
+      <input type="text" name="textfield4" id="textfield4" class="form-control" required/>
+    </td>
+  </tr>
+    <tr>
+      <td>&nbsp;</td>
+    <td>Picture</td>
+    <td>
+      <input type="file" name="fileField" id="fileField"class="form-control" required/>
+    <br></td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;</td>
+    <td>Department</td>
+
+    <td>
+        <select name="select2" id="select2" class="form-control">
+            {% for i in data %}
+        <option value="{{ i['dept_id'] }}">{{ i['name'] }}</option>
+            {% endfor %}
+    </select>
+    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>Qualification</td>
+    <td><input type="checkbox" name="q" value="MCA"/>MCA<input type="checkbox" name="q" value="Degree"/>Degree<input type="checkbox" name="q" value="+2"/>+2</td>
+  </tr>
+  <tr>
+    <td></td>
+      <td></td>
+    <td colspan="2">
+      <input type="submit" name="button" id="button" class="btn btn-primary" value="ADD"/>
+    </td>
+  </tr>
+</table>
+</form>
+       <script type="text/javascript" src="/static/jquery.js"></script>
+<script>
+$(document).ready(function(){
+{#alert("mmm")#}
+ $("#textfield6").keyup(function () {
+{#     alert("hiiii");#}
+     var a=$("#textfield6").val();
+     var h=a.length;
+     if(h!=10)
+     {
+{#         alert("hide");#}
+         $("#button").hide();
+     }
+     else {
+         $("#button").show()
+
+     }
+{##}
+ });
+ $("#textfield4").keyup(function () {
+     var email=$("#textfield4").val();
+     if(email != 0)
+        {
+            if(isValidEmailAddress(email))
+            {
+               $("#button").show();
+            } else {
+                $("#button").hide();
+            }
+        } else {
+            alert("none");
+        }
+
+
+ });
+
+
+
+$("#textfield10").keyup(function () {
+{#     alert("hiiii");#}
+     var a=$("#textfield10").val();
+     var h=a.length;
+     if(h!=6)
+     {
+{#         alert("hide");#}
+         $("#button").hide();
+     }
+     else {
+         $("#button").show()
+
+     }
+{##}
+ });
+
+
+
+
+
+
+});
+
+
+{#email#}
+function isValidEmailAddress(emailAddress) {
+    var pattern = /^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i;
+    return pattern.test(emailAddress);
+}
+
+
+</script>
+
+  <script>
+    function h() {
+      a=confirm("are you sure......");
+    }
+    </script>
+{% endblock %}

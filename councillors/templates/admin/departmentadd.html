@@ -1,0 +1,19 @@
+{% extends "admin/index.html" %}
+{% block body %}
+
+
+<form id="form1" name="form1" method="post" action="/add_dept" enctype="multipart/form-data" onsubmit=" return confirm('are you sure......')">
+<table width="530" height="97" >
+  <tr>
+    <td width="169" height="50">Department Name</td>
+    <td width="345"><input type="text" name="textfield" id="textfield" class="form-control" required/></td>
+  </tr>
+  <tr>
+      <td></td>
+    <td colspan="2">
+      <input type="submit" name="button" id="button"class="btn btn-primary"  value="ADD"/>
+   </td>
+    </tr>
+</table>
+</form>
+{% endblock %}

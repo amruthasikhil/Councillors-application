@@ -1,0 +1,27 @@
+{% extends "councillor/index.html"  %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table class="table table-striped" cellpadding="6">
+    <tr>
+      <th width="19">#</th>
+      <th width="127">Coordinators </th>
+{#      <th width="169">Fund to councillor</th>#}
+      <th width="191">Fund</td>
+      <th width="111">Date</th>
+      <th>&nbsp;</th>
+      <th>&nbsp;</th>
+    </tr>
+      {% for i in d %}
+    <tr>
+      <td>{{ loop.index }}&nbsp;</td>
+      <td><img src="{{ i['image'] }}" height="40" width="40"><br>{{ i['name'] }}&nbsp;</td>
+      <td>&nbsp;{{ i['fund'] }}</td>
+      <td>&nbsp;{{ i['date'] }}</td>
+{#      <td>&nbsp;</td>#}
+      <td width="50"><a href="/add_fund_to_coordinator_edit/{{ i['fund_id'] }}"><input type="button" class="btn-success" value="edit"/></a></td>
+      <td width="58"><a href="/dltfun/{{ i['fund_id'] }}"><input type="button" class="btn-danger" value="delete"/></a></td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

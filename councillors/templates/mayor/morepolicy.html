@@ -1,0 +1,17 @@
+{% extends "mayor/index.html"  %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/mb">
+  <table>
+      <tr><td><input type="hidden" value="{{ i['policy_id'] }}" name="b"/><td ><img src="{{ i['image'] }}" alt="" height="40" width="40"/></td></tr>
+    <tr>
+        <th width="133" scope="col">Name</th><td>&nbsp;{{ i['name'] }}</td></tr>
+       <tr> <th width="184" scope="col">Ward</th><td>{{ i['ward'] }}&nbsp;</td></tr>
+       <tr> <th width="184" scope="col">Place</th><td>{{ i['place'] }}&nbsp;</td></tr>
+      <tr> <th width="184" scope="col">PoliyName</th><td>{{ i['pname'] }}&nbsp;</td></tr>
+       <tr> <th width="184" scope="col">Description</th><td>{{ i['description'] }}&nbsp;</td></tr>
+      <tr><th width="154" scope="col">Date</th> <td>{{ i['date'] }}&nbsp;</td></tr>
+      <tr><td><input type="submit" value="ACCEPT" name="a" class="btn-success"/></td><td><input type="submit" value="REJECT" name="a" class="btn-danger"/></td></tr>
+
+  </table>
+</form>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "mayor/index.html"  %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/mayor_add_serviceb" enctype="multipart/form-data">
+  <table>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col"><label for="textfield"></label>
+      <input type="text" name="textfield" id="textfield" required class="form-control" /></th>
+    </tr>
+    <tr>
+      <th>Description</th>
+      <td><label for="textarea"></label>
+      <textarea name="textarea" id="textarea" required class="form-control"></textarea></td>
+    </tr>
+    <tr>
+    <td></td>
+      <td><div align="center">
+        <input type="submit" name="button" id="button" value="Submit" class="btn-success"/>
+      </div></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}

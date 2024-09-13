@@ -1,0 +1,24 @@
+{% extends "mayor/index.html"  %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+<table class="table table-striped">
+  <tr>
+  <th width="15">#</th>
+    <th width="106" scope="col">Category</th>
+    <th width="135" scope="col">Department</th>
+    <th width="269" scope="col">Description</th>
+    <th colspan="2"  scope="col"></th>
+    </tr>
+    {% for i in data %}
+  <tr>
+      <td>{{ loop.index }}</td>
+      <td>&nbsp;{{ i['category'] }}</td>
+      <td>&nbsp;{{ i['name'] }}</td>
+      <td>&nbsp;{{ i['description'] }}</td>
+      <td width="42"><a href="/mayor_edit_certificate_category/{{ i['category_id'] }}"><input type="button" value="edit" class="btn-success"/></a></td>
+      <td width="58"><a href="/dltcerti/{{ i['category_id'] }}"><input type="button" value="delete" class="btn-danger"/></a></td>
+  </tr>
+    {% endfor %}
+</table>
+</form>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "mayor/index.html"  %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="" enctype="multipart/form-data">
+  <table class="table table-striped">
+    <tr>
+      <th width="50" scope="row">#</th>
+      <th width="150">User Info</th>
+      <th width="285">Suggetions</th>
+      <th width="140">Date</th>
+    </tr>
+      {% for i in data %}
+    <tr>
+      <td scope="row">&nbsp;{{ loop.index }}</td>
+      <td><img src="{{ i['image'] }}" alt="" width="40" height="40"/><br/>{{ i['name'] }}&nbsp;</td>
+      <td>{{ i['suggestion'] }}&nbsp;</td>
+      <td>&nbsp;{{ i['date'] }}</td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "councillor/index.html"  %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/add_discussion_b">
+  <table width="200" cellpadding="6">
+
+    Discussion
+
+    <tr>
+      <th>Topic</th>
+      <td><input type="text" name="textfield" id="textfield" class="form-control" required/></td>
+    </tr>
+      <tr>
+      <th>Date</th>
+      <td><input type="date" name="textfield1" id="textfield1" class="form-control" required/></td>
+    </tr>
+    <tr>
+    <td></td>
+      <td colspan="2"><input type="submit" name="button" id="button" value="SEND" /></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}

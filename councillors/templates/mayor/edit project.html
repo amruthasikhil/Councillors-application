@@ -1,0 +1,45 @@
+{% extends "mayor/index.html"  %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/editpro">
+  <table>
+      <tr><td><input type="hidden" name="pid" value="{{ i['project_id'] }}" required class="form-control"/></td></tr>
+    <tr>
+      <th width="84" scope="row">Name</th>
+      <td width="468"><label for="textfield"></label>
+      <input type="text" name="textfield" id="textfield" value="{{ i['name'] }}" required class="form-control"/></td>
+    </tr>
+    <tr>
+      <th scope="row">Detail</th>
+      <td><label for="textarea"></label>
+      <textarea name="textarea" id="textarea" required class="form-control">{{ i['details'] }}</textarea></td>
+    </tr>
+
+       <tr>
+      <th width="78" scope="row">Enddate</th>
+      <td width="380"><label for="textfield1"></label>
+      <input type="date" name="textfield3" id="textfield3" required class="form-control" value="{{ i['enddate'] }}" /></td>
+    </tr>
+
+       <tr>
+      <th width="78" scope="row">Amount</th>
+      <td width="380"><label for="textfield1"></label>
+      <input type="text" name="textfield4" id="textfield4" required class="form-control" value="{{ i['amount'] }}"/></td>
+    </tr>
+      <tr>
+      <th width="78" scope="row">Status</th>
+      <td width="380"><label for="textfield1"></label>
+      <select required class="form-control" name="s">
+          <option>{{ i['status'] }}</option>
+           <option>Complete</option>
+      </select></td>
+    </tr>
+    <tr>
+    <tr>
+      <th scope="row">&nbsp;</th>
+      <td><div align="center">
+        <input type="submit" name="button" id="button" value="Update" class="btn-success" />
+      </div></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}

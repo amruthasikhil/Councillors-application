@@ -1,0 +1,30 @@
+{% extends "mayor/index.html"  %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table class="table table-striped">
+    <tr>
+    <th width="28">#</th>
+      <th width="108" scope="col">Name</th>
+      <th width="279" scope="col">Details</th>
+      <th width="197" scope="col">Status</th>
+      <th width="155" scope="col">Period</th>
+      <th colspan="2" scope="col">&nbsp;</th>
+    </tr>
+      {% for i in data %}
+    <tr>
+
+      <td>{{ loop.index }}&nbsp;</td>
+      <td>&nbsp;{{ i['name'] }}</td>
+      <td>{{ i['details'] }}&nbsp;</td>
+      <td>&nbsp;{{ i['status'] }}</td>
+        <td>&nbsp;{{ i['date'] }}&nbsp;to<br>{{ i['enddate'] }}</td>
+        {% if i['status']=='pending' %}
+
+      <td width="77"><div align="center"><a href="/mayor_edit_project/{{ i['project_id'] }}"><input type="button" value="edit" class="btn-success"/></a></div></td>
+      <td width="101"><div align="center"><a href="/dltprjct/{{ i['project_id'] }}"><input type="button" value="Delete" class="btn-danger"/></a></div></td>
+    {% endif %}
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "councillor/index.html"  %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table class="table table-striped" cellpadding="6">
+    <tr>
+      <th width="36">#</th>
+      <th width="105">Name</th>
+        <th width="91">Gender</th>
+      <th width="91">Place</th>
+      <th width="88">Post</th>
+      <th width="128">Pincode</th>
+      <th width="148">Email</th>
+      <th width="115">Phone</th>
+        <th colspan="2">Period&nbsp;</th>
+      <th colspan="2">&nbsp;</th>
+    </tr>
+      {% for i in data %}
+    <tr>
+      <td>&nbsp;{{ loop.index }}</td>
+      <td><img src="{{ i['image'] }}" alt="" width="32" height="32"/><br/>{{ i['name'] }}&nbsp;</td>
+      <td>{{ i['gender'] }}&nbsp;</td>
+      <td>&nbsp;{{ i['place'] }}</td>
+      <td>&nbsp;{{ i['post'] }}</td>
+      <td>{{ i['pin'] }}&nbsp;</td>
+      <td>{{ i['email'] }}&nbsp;</td>
+         <td>{{ i['phone'] }}&nbsp;</td>
+        <td>{{ i['joindate'] }} to <br>{{ i['enddate'] }}&nbsp;</td>
+      <td width="52"><a href="/add_coordinator_edit/{{ i['login_id'] }}"><input type="button" value="edit" class="btn-success"/></a></td>
+      <td width="58"><a href="/add_coordinator_dlt/{{ i['login_id'] }}"><input type="button" value="delete" class="btn-danger"/></a></td>
+    </tr>
+      {% endfor %}
+  </table>
+
+</form>
+{% endblock %}

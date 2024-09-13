@@ -1,0 +1,26 @@
+{% extends "councillor/index.html" %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/moredisc">
+<table cellpadding="6">
+
+   {% for i in d %}
+       <tr><td>{{ i['comment'] }}</td></tr><tr>
+           <td><img src="{{i['image']  }}" width="40" height="40">{{ i['name'] }}{{ i['cdate'] }}</td></tr>
+
+   {% endfor %}
+</table>
+<table cellpadding="6">
+{% for f in d3 %}
+    <tr><td>{{ f['comment'] }}</td></tr><tr>
+    <td><img src="{{f['i']  }}" width="40" height="40">{{ f['v'] }}{{ f['cdate'] }}</td></tr>
+
+{% endfor %}
+</table>
+
+<table>
+<tr>
+ <input type="hidden" name="m" value="{{ d2 }}">
+<input type="text" name="n"><input type="submit" name="n" value="Comment"></tr>
+</table>
+</form>
+{% endblock %}

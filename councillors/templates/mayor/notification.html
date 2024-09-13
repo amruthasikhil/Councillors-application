@@ -1,0 +1,21 @@
+{% extends "mayor/index.html"  %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/addnotifi">
+  <table >
+    <tr>
+      <th width="128" scope="row">Subject</th>
+      <td width="420"><label for="textfield"></label>
+      <input type="text" name="textfield" id="textfield" required class="form-control"/></td>
+    </tr>
+    <tr>
+      <th scope="row">Description</th>
+      <td><label for="textarea"></label>
+      <textarea name="textarea" id="textarea" required class="form-control"></textarea></td>
+    </tr>
+    <tr>
+    <td></td>
+      <td colspan="2" scope="row"><input type="submit" name="button" id="button" value="Submit" class="btn-success"/></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}

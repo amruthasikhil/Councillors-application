@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_viewprofile"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="View Profile" />
+        <item
+            android:id="@+id/nav_viewmayor"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="View Mayor" />
+        <item
+            android:id="@+id/nav_viewcooperation"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="View Coorperation" />
+        <item
+            android:id="@+id/nav_applicationcategory"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="View Application" />
+        <item
+            android:id="@+id/nav_certicategory"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="View Certificate" />
+
+        <item
+            android:id="@+id/nav_viewservice"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="View service" />
+        <item
+            android:id="@+id/nav_viewpolicy"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="View Policy" />
+        <item
+            android:id="@+id/nav_viewnotification"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="View Notification" />
+        <item
+            android:id="@+id/nav_viewproject"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="View Project" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_discussionforum"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Discussion" />
+            <item
+                android:id="@+id/nav_suggestion"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Suggestion" />
+            <item
+                android:id="@+id/nav_complaints"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Complaints" />
+            <item
+                android:id="@+id/nav_counrating"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Councillor Rating" />
+            <item
+                android:id="@+id/nav_deptrating"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Department Rating" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Logout" />
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,26 @@
+{% extends "councillor/index.html"  %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+             <table class="table table-striped" cellpadding="6">
+    <tr>
+      <th width="21">#</th>
+      <th width="151">User_info</th>
+      <th width="99">Date</th>
+      <th width="285">Complaints</th>
+      <th width="201">Replay</th>
+{#      <th width="104">&nbsp;</th>#}
+    </tr>
+                 {% for i in d %}
+    <tr>
+      <td>{{ loop.index }}&nbsp;</td>
+      <td>&nbsp;<img src="{{ i['image'] }}" width="30" height="30">{{ i['name'] }}</td>
+      <td>{{ i['complaint_date'] }}&nbsp;</td>
+      <td>{{ i['complaint'] }}&nbsp;</td>
+      {% if i['reply']=='pending'%}
+      <td><a href="/sendr/{{ i['complaint_id'] }}">replay</a></td>
+    {% endif %}
+    </tr>
+                 {% endfor %}
+  </table>
+</form>
+{% endblock %}

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Profile" />
+        <item
+            android:id="@+id/nav_viewcouncillor"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="View Councilllor" />
+        <item
+            android:id="@+id/nav_viewservice"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="View service" />
+        <item
+            android:id="@+id/nav_viewpolicy"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="View Policy" />
+        <item
+            android:id="@+id/nav_projectview"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="View Project" />
+        <item
+            android:id="@+id/nav_viewallocatedfund"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="View Allocated Fund" />
+        <item
+            android:id="@+id/nav_chatwithcouncilllor"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Chat with councillor" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_publicneedreporting"
+                android:icon="@drawable/ic_menu_share"
+                android:title="View Public need report" />
+            <item
+                android:id="@+id/nav_publicneedreportingallocation"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Public Allocation View" />
+            <item
+                android:id="@+id/nav_viewnotification1"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="View Notification" />
+            <item
+                android:id="@+id/nav_logout1"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Logout" />
+        </menu>
+    </item>
+
+</menu>

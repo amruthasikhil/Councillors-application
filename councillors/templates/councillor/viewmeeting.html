@@ -1,0 +1,23 @@
+{% extends "councillor/index.html"  %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+<table class="table table-striped" cellpadding="6">
+  <tr>
+      <th>#</th>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Venue</th>
+    <th>Topic</th>
+  </tr>
+    {% for i in d %}
+  <tr>
+  <td>{{ loop.index }}</td>
+    <td>{{ i['date'] }}&nbsp;</td>
+    <td>{{ i['time'] }}&nbsp;</td>
+    <td>{{ i['venue'] }}&nbsp;</td>
+    <td>&nbsp;{{ i['topic'] }}</td>
+  </tr>
+    {% endfor %}
+</table>
+</form>
+{% endblock %}

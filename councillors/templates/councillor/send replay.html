@@ -1,0 +1,20 @@
+{% extends "councillor/index.html"  %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/send_rply">
+  <table width="200" cellpadding="6">
+    <tr>
+      <th>Complaints</th>
+      <td>{{ d['complaint'] }}</td>
+    </tr>
+      <tr><td><input type="hidden" name="ids" value="{{ d['complaint_id'] }}" class="form-control" required></td></tr>
+    <tr>
+      <th>Replay</th>
+      <td><input type="text" name="textfield" id="textfield" class="form-control" required /></td>
+    </tr>
+    <tr>
+    <td></td>
+      <td colspan="2"><input type="submit" name="button" id="button" value="SEND" /></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}

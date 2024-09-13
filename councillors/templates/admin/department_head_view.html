@@ -1,0 +1,42 @@
+{% extends "admin/index.html" %}
+{% block body %}
+
+
+<form action="/searchhead" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <div class="form-inline col-lg-12">
+      <div class="form-group col-md-12"> <input name="srch" type="text" class="form-control col-md-11"/>
+          <input name="btn" type="submit" value="search" class="btn btn-success"/></div>
+
+     </div>
+
+  <br />
+  <br />
+
+  <table class="table table-striped">
+    <tr>
+    <th width="35">#</th>
+    <th width="277">Clerk Info</th>
+      <th width="322">Clerk Address</th>
+      <th width="91">Department</th>
+      <th colspan="2">&nbsp;</th>
+    </tr>
+
+        {% for i in d %}
+            <tr>
+    <td width="35">&nbsp;{{ loop.index }}</td>
+    <td><img src="{{i['image']  }}" alt="" name="cimg" width="32" height="32" id="cimg" /><br/>{{ i['name'] }}</td>
+      <td width="322">{{ i['house_name'] }}<br/>{{ i['place'] }}<br/>{{ i['district'] }}<br/>{{ i['pin'] }}&nbsp;</td>
+      <td width="91">&nbsp;{{ i['d'] }}</td>
+     <td width="116"><a href="/dept_head_update/{{ i['head_id'] }}"><input type="button"class="btn btn-success" value="edit"/></a></td>
+      <td width="123"><a href="/dept_head_delete/{{ i['head_id'] }}" onclick="return confirm('Are you sure')"><input type="button"class="btn btn-danger" value="delete"/></a></td>
+              </tr>
+        {% endfor %}
+
+  </table>
+</form>
+      <script>
+    function h() {
+      a=confirm("are you sure......");
+    }
+    </script>
+{% endblock %}

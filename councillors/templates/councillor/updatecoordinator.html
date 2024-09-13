@@ -1,0 +1,72 @@
+{% extends "councillor/index.html"  %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/add_coordinator_edit_b" enctype="multipart/form-data">
+  <table cellpadding="6">
+  <tr>
+
+      <td width="255"><input type="hidden" name="cid" id="cid" value="{{ data['coordinator_id'] }}"/></td>
+    </tr>
+    <tr>
+      <th width="104">Name</th>
+      <td width="255"><input type="text" name="textfield" id="textfield" value="{{ data['name'] }}" class="form-control" required/></td>
+    </tr>
+      <tr>
+
+    <th>Gender</th>
+          {% if data['gender']=='male' %}
+    <td>
+          <input type="radio" name="RadioGroup1" value="male" id="RadioGroup1_0"  required checked/>
+          male
+        <br />
+          <input type="radio" name="RadioGroup1" value="female" id="RadioGroup1_1"  required/>
+          female
+        <br />
+      </p>
+    </td>
+          {% endif %}
+              {% if data['gender']=='female' %}
+    <td>
+          <input type="radio" name="RadioGroup1" value="male" id="RadioGroup1_0" required />
+          male
+        <br />
+          <input type="radio" name="RadioGroup1" value="female" id="RadioGroup1_1"  required checked/>
+          female
+        <br />
+      </p>
+    </td>
+          {% endif %}
+  </tr>
+    <tr>
+      <th>Place</th>
+      <td><input type="text" name="textfield2" id="textfield2" value="{{ data['place'] }}" class="form-control" required/></td>
+    </tr>
+    <tr>
+      <th>Post</th>
+      <td><input type="text" name="textfield3" id="textfield3" value="{{ data['post'] }}" class="form-control" required/></td>
+    </tr>
+    <tr>
+      <th>Pincode</th>
+      <td><input type="text" name="textfield4" id="textfield4" value="{{ data['pin'] }}" class="form-control" required/></td>
+    </tr>
+    <tr>
+      <th>Email</th>
+      <td><input type="text" name="textfield5" id="textfield5" value="{{ data['email'] }}" class="form-control" required/></td>
+    </tr>
+    <tr>
+      <th>Phone</th>
+      <td><input type="text" name="textfield6" id="textfield6" value="{{ data['phone'] }}" class="form-control" required/></td>
+    </tr>
+      <tr>
+
+    <th>Picture</th>
+    <td>
+      <input type="file" name="fileField" id="fileField" class="form-control"/>
+    <br></td>
+  </tr>
+    <tr>
+    <td></td>
+      <td colspan="2"><center><input type="submit" name="button" id="button" value="Update" /></center></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}

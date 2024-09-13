@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.user.councillorsappand">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="councillorsapp"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Ipset">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Userhome" />
+        <activity android:name=".Coorperationhome" />
+        <activity android:name=".Usersignup" />
+        <activity android:name=".Usermayorview" />
+        <activity android:name=".Coorperationviewuser" />
+        <activity android:name=".Umayorview" />
+        <activity android:name=".Userviewservice" />
+        <activity android:name=".Userpolicyview" />
+        <activity android:name=".Usernotification" />
+        <activity android:name=".Userprojectview" />
+        <activity android:name=".Chat" />
+        <activity
+            android:name=".Userhome2"
+            android:label="@string/title_activity_userhome2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Userprojectmore" />
+        <activity android:name=".Usersendnotification" />
+        <activity android:name=".Councillorrating" />
+        <activity android:name=".Userdeptrating" />
+        <activity android:name=".Userviewviewcomplaint" />
+        <activity android:name=".Usersuggestion" />
+        <activity android:name=".Usersendsuggestion" />
+        <activity android:name=".Userdisscussionview" />
+        <activity android:name=".Userdisccussionsend" />
+        <activity
+            android:name=".Coordinatorhomepages"
+            android:label="@string/title_activity_coordinatorhomepages"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Coodinatorcounview" />
+        <activity android:name=".Coordinatorpolicyview" />
+        <activity android:name=".Logout" />
+        <activity android:name=".Chatwithcouncillor" />
+        <activity android:name=".Fundallocationtocoordinator"></activity>
+    </application>
+
+</manifest>

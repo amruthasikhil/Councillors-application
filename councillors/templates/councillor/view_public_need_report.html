@@ -1,0 +1,25 @@
+{% extends "councillor/index.html"  %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table class="table table-striped" cellpadding="6">
+    <tr>
+      <th width="46">#</th>
+      <th width="286">Issue</th>
+      <th width="124">Requested date</th>
+      <th width="138">Status</th>
+      <th width="113">&nbsp;</th>
+    </tr>
+      {% for i in d  %}
+    <tr>
+      <td>{{ loop.index }}&nbsp;</td>
+      <td>{{ i['purpose'] }}&nbsp;</td>
+      <td>{{ i['issue_date'] }}&nbsp;</td>
+      <td>{{ i['status'] }}</td>
+        {% if i['status']=='accept' %}
+      <td><a href="/public_need_fund_alloc/{{ i['report_id'] }}">allocate info</a></td>
+    {% endif %}
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

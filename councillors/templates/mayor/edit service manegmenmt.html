@@ -1,0 +1,24 @@
+{% extends "mayor/index.html"  %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/mayor_edit_services">
+  <table >
+    <tr>
+      <th scope="col">name</th>
+      <th scope="col"><label for="textfield"></label>
+
+      <input type="text" name="textfield" id="textfield" value="{{ i['name']}}" required class="form-control"/></th>
+    </tr>
+      <tr><td><input type="hidden" name="sid" value="{{ i['service_id'] }}" required class="form-control"/> </td></tr>
+    <tr>
+      <td>description</td>
+      <td><label for="textarea"></label>
+      <textarea name="textarea" id="textarea" required class="form-control">{{ i['description']  }}</textarea></td>
+    </tr>
+    <tr>
+      <td colspan="2"><div align="center">
+        <input type="submit" name="button" id="button" value="Update" class="btn-success"/>
+      </div></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "councillor/index.html"  %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/add_policy_b" enctype="multipart/form-data">
+  <table width="351" cellpadding="6">
+    <tr>
+      <th>Policyname</th>
+      <td><input type="text" name="textfield" id="textfield" class="form-control" required/></td>
+    </tr>
+    <tr>
+      <th>Description</th>
+      <td><input type="text" name="textfield2" id="textfield2" class="form-control" required/></td>
+    </tr>
+    <tr>
+      <th>Date </th>
+      <td><input type="date" name="textfield3" id="textfield3" class="form-control" required/></td>
+    </tr>
+{#    <tr>#}
+{#      <th>Status</th>#}
+{#      <td><input type="text" name="textfield4" id="textfield4" /></td>#}
+{#    </tr>#}
+    <tr>
+    <td></td>
+        <td colspan="2"><center><input type="submit" name="button" id="button" value="ADD" /></center></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "mayor/index.html"  %}
+{% block body %}
+  <table class="table table-striped">
+  <tr>
+      <td width="258">Name</td><td><img src="{{ i['image'] }}" alt="" name="img3" width="32" height="32" id="img3" /><br/>{{ i['cname'] }}</td></tr>
+      <tr><td width="95">Gender</td><td>{{ i['gender'] }}&nbsp;</td></tr>
+    
+      <tr> <td width="239">Address</td><td>{{ i['house_name'] }}<br/>{{ i['place'] }}<br/>{{ i['district'] }}<br/>{{ i['pincode'] }}&nbsp;</td></tr>
+      <tr><td width="197">Email</td><td>&nbsp;{{ i['email'] }}</td></tr>
+      <tr><td width="165">Phone</td> <td>{{ i['phone'] }}&nbsp;</td></tr>
+   
+      <tr> <td width="152">Ward</td> <td width="63">{{ i['ward'] }}&nbsp;</td></tr>
+      <tr>
+    <td width="63">Fund</td>
+    <td width="61">&nbsp;{{ i['fund'] }}&nbsp;</td>
+  </tr>
+
+</table>
+</form>
+{% endblock %}

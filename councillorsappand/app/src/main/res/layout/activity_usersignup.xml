@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Usersignup"
+    android:background="@drawable/bg">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ig1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/input_group"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="100dp"
+                    android:maxHeight="100dp"
+                    android:src="@drawable/ic_launcher_background" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="SIGN IN"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="Lorem ipsum dolor sit amet."
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/input_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="50dp"
+                android:layout_alignParentBottom="true"
+                app:layout_constraintTop_toBottomOf="@+id/ig1"
+                android:gravity="center">
+
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:textAllCaps="true"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:fontFamily="sans-serif"
+                    android:text="Name" />
+
+                <EditText
+                    android:id="@+id/txt_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_top"
+                    android:hint="Username"
+                    android:inputType="textPersonName"
+                    android:padding="15dp" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:fontFamily="sans-serif"
+                    android:text="Place"
+                    android:textAllCaps="true"
+                    android:textColor="#ffffff"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    tools:text="Place" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <EditText
+                        android:id="@+id/txt_place"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_text_bottom"
+                        android:hint="Enter Place"
+                        android:inputType="text"
+                        android:padding="15dp" />
+
+
+
+                </TableRow>
+
+
+                <TextView
+                    android:id="@+id/txt_post1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:fontFamily="sans-serif"
+                    android:text="Post"
+                    android:textAllCaps="true"
+                    android:textColor="#ffffff"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    tools:text="Post" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                    <EditText
+                        android:id="@+id/txt_post"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_text_bottom"
+                        android:hint="Enter Post"
+                        android:inputType="textPassword"
+                        android:padding="15dp" />
+
+
+
+                </TableRow>
+
+
+                <TextView
+                    android:id="@+id/txt_pin1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:fontFamily="sans-serif"
+                    android:text="Pin"
+                    android:textAllCaps="true"
+                    android:textColor="#ffffff"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    tools:text="Pin" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                    <EditText
+                        android:id="@+id/txt_pin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_text_bottom"
+                        android:hint="Enter Pincode"
+                        android:inputType="textPassword"
+                        android:padding="15dp" />
+
+
+
+                </TableRow>
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:textAllCaps="true"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:fontFamily="sans-serif"
+                    android:text="Email" />
+
+                <EditText
+                    android:id="@+id/txt_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_bottom"
+                    android:hint="Enter Mail Id"
+                    android:inputType="text"
+                    android:padding="15dp" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:textAllCaps="true"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:fontFamily="sans-serif"
+                    android:text="Phone Number" />
+
+                <EditText
+                    android:id="@+id/txt_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_bottom"
+                    android:hint="Enter Phone Number"
+                    android:inputType="textPassword"
+                    android:padding="15dp" />
+
+                <TextView
+                    android:id="@+id/textwars"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:textAllCaps="true"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:fontFamily="sans-serif"
+                    android:text="Ward" />
+
+                <EditText
+                    android:id="@+id/txt_ward"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_bottom"
+                    android:hint="Enter ward"
+                    android:inputType="textPassword"
+                    android:padding="15dp" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:textAllCaps="true"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:fontFamily="sans-serif"
+                    android:text="Password" />
+
+                <EditText
+                    android:id="@+id/txt_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_bottom"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:padding="15dp" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:textAllCaps="true"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:fontFamily="sans-serif"
+                    android:text="Confirm Password" />
+
+                <EditText
+                    android:id="@+id/txt_cpass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_bottom"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:padding="15dp" />
+
+
+                <Button
+                    android:id="@+id/btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:text="SIGN IN"
+                    android:textAllCaps="false"
+                    android:textColor="#FE5295"
+                    android:textSize="17sp" />
+
+
+            </LinearLayout>
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

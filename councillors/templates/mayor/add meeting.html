@@ -1,0 +1,35 @@
+{% extends "mayor/index.html"  %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/mayor_add_meeting_post">
+  <table>
+    <tr>
+      <th scope="col">Date</th>
+      <td scope="col"><label for="textfield2"></label>
+        <div>
+          <input type="date" name="textfield2" id="textfield2" required class="form-control"/>
+      </div></td>
+    </tr>
+    <tr>
+      <th>Time</th>
+      <td><label for="textfield3"></label>
+      <input type="time" name="textfield3" id="textfield3" required class="form-control"/></td>
+    </tr>
+    <tr>
+      <th>Venue</th>
+      <td><label for="textfield4"></label>
+      <input type="text" name="textfield4" id="textfield4" required class="form-control"/></td>
+    </tr>
+    <tr>
+      <th>Topic</th>
+      <td><label for="textfield5"></label>
+      <input type="text" name="textfield5" id="textfield5" required class="form-control"/></td>
+    </tr>
+    <tr>
+    <td></td>
+      <td colspan="2"><div align="center">
+        <input type="submit" name="button" id="button" value="Submit" class="btn-success"/>
+      </div></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}

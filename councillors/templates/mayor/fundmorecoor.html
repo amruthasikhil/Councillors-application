@@ -1,0 +1,24 @@
+{% extends "mayor/index.html"  %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table class="table table-striped">
+     <tr><td>COUNCILLOR</td></tr>
+      <tr><td><td ><img src="{{ i['i'] }}" alt="" height="40" width="40"/></td></tr>
+    <tr>
+        <th width="133" scope="col">Name</th><td>&nbsp;{{ i['cname'] }}</td></tr>
+       <tr> <th width="184" scope="col">Ward</th><td>{{ i['ward'] }}&nbsp;</td></tr>
+       <tr> <th width="184" scope="col">Place</th><td>{{ i['place'] }}&nbsp;</td></tr>
+      <tr> <th width="184" scope="col">Phone</th><td>{{ i['p'] }}&nbsp;</td></tr>
+       <tr><td>COORDINATOR</td></tr>
+       <tr><td><td ><img src="{{ i['image'] }}" alt="" height="40" width="40"/></td></tr>
+    <tr>
+        <th width="133" scope="col">Name</th><td>&nbsp;{{ i['name'] }}</td></tr>
+       <tr> <th width="184" scope="col">Place</th><td>{{ i['place'] }}&nbsp;</td></tr>
+      <tr> <th width="184" scope="col">Phone</th><td>{{ i['phone'] }}&nbsp;</td></tr>
+<tr><td>FUND ALLOCATED</td></tr>
+       <tr>
+        <th width="133" scope="col">FUND</th><td>&nbsp;{{ i['fund'] }}</td></tr>
+       <tr> <th width="184" scope="col">Date</th><td>{{ i['date'] }}&nbsp;</td></tr>
+  </table>
+</form>
+{% endblock %}

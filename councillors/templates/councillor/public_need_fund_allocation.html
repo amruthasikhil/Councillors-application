@@ -1,0 +1,26 @@
+{% extends "councillor/index.html"  %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table cellpadding="6">
+      <tr><th width="175">Coordinator</th>
+          <td><img src="{{ d['image'] }}" height="60" width="60"></td>
+      <td width="114">&nbsp;{{ d['name'] }}</td>
+      </tr>
+      <tr><th width="175">Place</th>
+      <td width="114">{{ d['place'] }}&nbsp;</td>
+      </tr>
+    <tr>
+      <th width="175">Amount</th>
+      <td width="114">&nbsp;{{ d['fund'] }}</td>
+    </tr>
+    <tr>
+      <th>Allocated_date</th>
+      <td>&nbsp;{{ d['date'] }}</td>
+    </tr>
+    <tr>
+      <th>Narration</th>
+      <td>{{ d['purpose'] }}&nbsp;</td>
+    </tr>
+  </table>
+</form>
+{% endblock %}

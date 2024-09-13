@@ -1,0 +1,23 @@
+{% extends "councillor/index.html"  %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table class="table table-striped" cellpadding="6">
+    <tr>
+      <th width="48" scope="col">#</th>
+      <th width="172" scope="col">Subject</th>
+      <th width="184" scope="col">Description</th>
+      <th width="125" scope="col">Date</th>
+      <th colspan="2" scope="col">&nbsp;</th>
+    </tr>
+      {% for i in data %}
+    <tr>
+      <td>&nbsp;{{ loop.index }}</td>
+      <td>&nbsp;{{ i['subject'] }}</td>
+      <td>&nbsp;{{ i['description'] }}</td>
+      <td>&nbsp;{{ i['date'] }}</td>
+
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

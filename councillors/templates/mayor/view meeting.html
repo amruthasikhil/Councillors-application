@@ -1,0 +1,26 @@
+{% extends "mayor/index.html"  %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table class="table table-striped">
+    <tr>
+    <th width="29">#</th>
+      <th width="97" scope="col">Date</th>
+      <th width="99" scope="col">Time</th>
+      <th width="121" scope="col">Venue</th>
+      <th width="239" scope="col">Topic</th>
+      <th colspan="2" scope="col">&nbsp;</th>
+    </tr>
+      {% for i in data %}
+    <tr>
+    <td>{{ loop.index }}</td>
+      <td>{{ i['date'] }}&nbsp;</td>
+      <td>{{ i['time'] }}&nbsp;</td>
+      <td>{{ i['venue'] }}&nbsp;</td>
+      <td>&nbsp;{{ i['topic'] }}</td>
+     <td width="48"><a href="/mayor_edit_meeting/{{ i['meetingid'] }}"><input type="button" value="Edit" class="btn-success"/></a></td>
+      <td width="60"><a href="/dltmeeting/{{ i['meetingid'] }}"><input type="button" value="Delete" class="btn-danger"/></a></td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

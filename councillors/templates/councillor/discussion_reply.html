@@ -1,0 +1,20 @@
+{% extends "councillor/index.html" %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+
+    <div class="card">
+    <div class="card-body">
+    <h4 class="card-title">{{ data['discussion_topic']  }}</h4>
+        <p class="card-text">{{ data['date'] }}&nbsp;</p>
+         {% for i in d %}
+         {{ i['a1'] }}
+{% endfor %}
+
+        <a href="/moredis/{{ data['discussion_id'] }}" class="btn btn-primary">Comment</a>
+
+
+
+    </div></div>
+
+</form>
+{% endblock %}

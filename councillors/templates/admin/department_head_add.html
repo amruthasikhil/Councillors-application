@@ -1,0 +1,37 @@
+{% extends "admin/index.html" %}
+{% block body %}
+
+
+<form id="form1" name="form1" method="post" action="/add_departmenthead" onsubmit="return confirm('are you sure......')">
+  <table width="382" >
+
+       <tr>
+      <td>Department</td>
+      <td><select name="select2" class="form-control" id="select2">
+          {% for i in data %}
+              <option value="{{ i['dept_id'] }}">{{ i['name'] }}</option>
+          {% endfor %}
+      </select></td>
+    </tr>
+    <tr>
+      <td width="146">Clerk</td>
+      <td width="220"><select name="select"class="form-control"  id="select">
+          {% for e in d %}
+              <option value="{{ e['clerk_id'] }}">{{ e['name'] }}</option>
+          {% endfor %}
+      </select></td>
+    </tr>
+
+    <tr>
+        <td></td>
+      <td colspan="2"><input type="submit" name="button" class="btn btn-primary"  id="button" value="ADD" /></td>
+    </tr>
+  </table>
+</form>
+  <script>
+    function h() {
+        a = confirm("are you sure......");
+        alert('hiiiii');
+    }
+    </script>
+{% endblock %}

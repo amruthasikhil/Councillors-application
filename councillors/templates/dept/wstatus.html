@@ -1,0 +1,21 @@
+{% extends "dept/index.html"  %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table class="table table-striped" width="400">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Clerk</th>
+      <th scope="col">Status</th>
+      <th scope="col">Description</th>
+    </tr>
+      {% for i in d %}
+    <tr>
+      <td>{{ loop.index }}&nbsp;</td>
+      <td>&nbsp;<img src="{{ i['image'] }}" height="40" width="40"><br>{{ i['name'] }}<br>{{ i['house_name'] }}<br>{{ i['place'] }}<br>{{ i['phone'] }}<br></td>
+      <td>{{ i['work_status'] }}&nbsp;</td>
+        <td><a href="{{ i['description'] }}" target="_blank">{{ i['description'] }}</a></td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

@@ -1,0 +1,166 @@
+{% extends "admin/index.html" %}
+{% block body %}
+
+
+<form id="form2" name="form2" method="post" action="/addmayor" enctype="multipart/form-data" onsubmit="return confirm('are you sure......')">
+<h3>ADD MAYOR</h3>
+<p>&nbsp;</p>
+<table width="746" height="644" >
+  <tr>
+    <td width="78">&nbsp;</td>
+    <td width="78"><p>Name</p></td>
+    <td width="407">
+      <input type="text" name="name" class="form-control"  id="textfield" required/>
+    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>Gender</td>
+    <td>   
+          <input type="radio" name="gender" value="male" id="RadioGroup1_0" required/>
+          male
+        <br />
+          <input type="radio" name="gender" value="female" id="RadioGroup1_1" required/>
+          female
+        <br />
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>DOB</td>
+    <td>
+      <input type="date" class="form-control" name="dob" id="textfield3" required />
+    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>House name</td>
+    <td>
+      <input type="text" name="hn" class="form-control" id="textfield2" required />
+    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>Place</td>
+    <td>
+      <input type="text" name="place"class="form-control"  id="textfield5" required/>
+    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>Phone</td>
+    <td>
+      <input type="number" name="ph" class="form-control" id="ph" required/>
+    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>Pincode</td>
+    <td>
+      <input type="number" name="pin" class="form-control" id="pin" required />
+    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>District</td>
+    <td>
+      <input type="text" name="dis"class="form-control"  id="textfield9"required />
+    </td>
+  </tr>
+  
+  <tr>
+    <td>&nbsp;</td>
+    <td>Email</td>
+    <td>
+      <input type="text" name="email"class="form-control"  id="email"required />
+    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>Picture</td>
+    <td>
+      <input type="file" name="pic" class="form-control" id="fileField" required/>
+    <br></td>
+  </tr>
+
+  <tr>
+    <td></td>
+
+      <td></td>
+        <td >
+      <input type="submit" name="button" class="btn btn-primary" id="button" value="ADD" />
+    </td>
+  </tr>
+</table>
+</form>
+   <script type="text/javascript" src="/static/jquery.js"></script>
+<script>
+$(document).ready(function(){
+{#alert("mmm")#}
+ $("#ph").keyup(function () {
+{#     alert("hiiii");#}
+     var a=$("#ph").val();
+     var h=a.length;
+     if(h!=10)
+     {
+{#         alert("hide");#}
+         $("#button").hide();
+     }
+     else {
+         $("#button").show()
+
+     }
+{##}
+ });
+ $("#email").keyup(function () {
+     var email=$("#email").val();
+     if(email != 0)
+        {
+            if(isValidEmailAddress(email))
+            {
+               $("#button").show();
+            } else {
+                $("#button").hide();
+            }
+        } else {
+            alert("none");
+        }
+
+
+ });
+
+
+
+ $("#pin").keyup(function () {
+{#     alert("hiiii");#}
+     var a=$("#pin").val();
+     var h=a.length;
+     if(h!=6)
+     {
+{#         alert("hide");#}
+         $("#button").hide();
+     }
+     else {
+         $("#button").show()
+
+     }
+{##}
+ });
+
+});
+{#email#}
+function isValidEmailAddress(emailAddress) {
+    var pattern = /^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i;
+    return pattern.test(emailAddress);
+}
+
+
+</script>
+      <script>
+    function h() {
+      a=confirm("are you sure......");
+    }
+    </script>
+
+{% endblock %}
