@@ -56,7 +56,6 @@ The **Councillors App** is designed to enhance municipal governance by facilitat
 - **Server:** WAMP (Windows, Apache, MySQL, PHP)
 - **IDE:** PyCharm
 - **APIs:** RESTful services for mobile and web communication
-- **Authentication:** OAuth2.0 for secure login
 - **Mobile Application:** Created using Java and the Volley library for network operations.
 
 ---
