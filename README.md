@@ -61,4 +61,3 @@ The **Councillors App** is designed to enhance municipal governance by facilitat
 
 ---
 
-Feel free to adjust or add any additional details as needed!
