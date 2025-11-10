@@ -1,8 +1,8 @@
 
-### **Councillors App**
+### **Local Governance Management System (LGMS)**
 
 **Project Overview:**
-The **Councillors App** is designed to enhance municipal governance by facilitating effective communication and management across various city stakeholders, including the mayor, departments, councillors, and users.
+The **Local Governance Management System (LGMS)** is designed to enhance municipal governance by facilitating effective communication and management across various city stakeholders, including the mayor, departments, councillors, and users.
 
 ---
 
